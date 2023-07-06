@@ -21,8 +21,11 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             $sender->sendMessage("Please Use this command in game!");
             return false;
        $adultrating = $this->getConfig("Adult");
-      $adult = $this->getFile("Jokes" . yml)getConfig("AdultJokes");
-    
+      $jokesfile = $this->file_get_contents("jokes.yml");
+      $adultjokes = $jokesfile->getContents("AdultJokes");
+      $jokes = $jokesfile->getConfents("Jokes");
+       $adult = $adultjokes->random();
+        $joke = $jokes->random();
         switch($command->getName()){
             case "joke":
           if $adultrating == true:
