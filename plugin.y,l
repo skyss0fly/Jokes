@@ -1,0 +1,14 @@
+name: Jokes
+main: src\Main
+version: 1.0
+api: 5.0.0
+author: skyss0fly
+description: A simple jokes plugin
+permissions:
+  jokes.use:
+    default: op
+commands:
+  joke:
+    description: use this to display your coords
+    permission: jokes.use
+    default: false
